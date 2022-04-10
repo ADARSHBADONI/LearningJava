@@ -1,4 +1,4 @@
-package Unit_01;
+package UNIT_01;
 
 /* Problem Statement:
 P8_String: 
@@ -13,7 +13,7 @@ F3 - String Compare: Check if the strings are equal or not?
 public class P8_String {
 
 	public static void main(String[] args) {
-		
+
 		QuestionsOnString obj = new QuestionsOnString();
 
 		String s1 = new String("75457");
@@ -23,7 +23,6 @@ public class P8_String {
 		obj.reverseOfAString(s1);
 		obj.stringEqualOrNot(s1, s2);
 
-
 	}
 
 }
@@ -32,16 +31,42 @@ class QuestionsOnString {
 
 	void palindromeOrNot(String s) {
 		// Write Logic Here!
+		String reverses="";
+		 int strLength = s.length();
+
+		    for (int i = (strLength - 1); i >=0; --i) {
+		      reverses = reverses + s.charAt(i);
+		    }
+
+		    if (s.toLowerCase().equals(reverses.toLowerCase())) {
+		      System.out.println(s + " is a Palindrome String.");
+		    }
+		    else {
+		      System.out.println(s + " is not a Palindrome String.");
+		    }
+		
+		
 
 	}
 
 	void reverseOfAString(String s) {
 		// Write Logic Here!
+		String nstr="";
+		char ch;
+		for (int i=0; i<s.length(); i++)
+	      {
+	        ch= s.charAt(i); //extracts each character
+	        nstr= ch+nstr; //adds each character in front of the existing string
+	      }
+	      System.out.println("Reversed word: "+ nstr);
 
 	}
 	
 	void stringEqualOrNot(String s1,String s2) {
 		// Write Logic Here!
+		boolean areTwoStringsEqual = s1.equals(s2);
+		 
+        System.out.print("Two strings are equal : "+areTwoStringsEqual);
 		
 	}
 }

@@ -19,7 +19,7 @@ public class P4_Task02_WrapperClassesInJava {
 		
 		System.out.println(a + "" + i + "" + j);
 		
-		System.out.println(i.toString());
+		System.out.println(i.toString()); 
 		
 		//a.toString() can not be done due to a is int not object
 		
